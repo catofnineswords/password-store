@@ -1,8 +1,14 @@
 ======================
 Simple Password Store
-by Jason Donenfeld
-   Jason@zx2c4.com
+Forked from: Jason Donenfeld, Jason@zx2c4.com
+by Renee, catofnineswords@github
 ======================
+
+Renée's modifications:
+- Forced copying of passwords to the clipboard, which effectively disables them being displayed on screen
+- git version 1.8.3 (RHEL 7.x) does not have the -C option, so all calls to "git -C $INNER_GIT_DIR" fail catastrophically.
+  git --git-dir $INNER_GIT_DIR is not a suitable replacement
+
 
 This is a very simple password store that encrypts passwords using gpg and
 places the encrypted password in a directory. It can generate new passwords
